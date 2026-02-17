@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Virtual Try-On",
+    "slug": "virtual-tryon",
+    "scheme": "virtual-tryon",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access so you can take a photo for virtual try-on.",
+        "NSPhotoLibraryUsageDescription": "We need photo library access so you can select a photo for virtual try-on."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0F"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Virtual Try-On to access your photos for try-on.",
+          "cameraPermission": "Allow Virtual Try-On to use your camera for try-on."
+        }
+      ]
+    ]
+  }
+}
